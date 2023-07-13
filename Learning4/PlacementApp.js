@@ -52,17 +52,33 @@ const App = () => {
     }
     setterFunction(value + 1);
   };
+  
   const [squares, setSquares] = useState([<Square />, <Square />, <Square />]);
   return (
     <>
 
-    Status bar
+
       <View style={{paddingTop: StatusBar.currentHeight}} />
+
+      {/* ---------- Playing space with boxes ---------- */}
+
       <View style={[styles.container, styles.playingSpace, hookedStyles]}>
+
         {squares.map(elem => elem)}
+
       </View>
+
+      {/* ---------- Playing space ends ---------- */}
+
+
+
+
+      {/* ========== Buttons at bottom for control ========== */}
+
       <ScrollView style={styles.container}>
+
         <View style={styles.controlSpace}>
+
           <View style={styles.buttonView}>
             <Button
               title="Change Flex Direction"
@@ -72,6 +88,7 @@ const App = () => {
             />
             <Text style={styles.text}>{flexDirections[flexDirection]}</Text>
           </View>
+
           <View style={styles.buttonView}>
             <Button
               title="Change Justify Content"
@@ -85,6 +102,7 @@ const App = () => {
             />
             <Text style={styles.text}>{justifyContents[justifyContent]}</Text>
           </View>
+
           <View style={styles.buttonView}>
             <Button
               title="Change Align Items"
@@ -94,6 +112,7 @@ const App = () => {
             />
             <Text style={styles.text}>{alignItemsArr[alignItems]}</Text>
           </View>
+
           <View style={styles.buttonView}>
             <Button
               title="Change Direction"
@@ -101,6 +120,7 @@ const App = () => {
             />
             <Text style={styles.text}>{directions[direction]}</Text>
           </View>
+
           <View style={styles.buttonView}>
             <Button
               title="Change Flex Wrap"
@@ -108,12 +128,14 @@ const App = () => {
             />
             <Text style={styles.text}>{wraps[wrap]}</Text>
           </View>
+
           <View style={styles.buttonView}>
             <Button
               title="Add Square"
               onPress={() => setSquares([...squares, <Square />])}
             />
           </View>
+
           <View style={styles.buttonView}>
             <Button
               title="Delete Square"
@@ -122,38 +144,48 @@ const App = () => {
               }
             />
           </View>
+
         </View>
+
       </ScrollView>
+
+      {/* ========== Control buttons ends ========== */}
+
     </>
   );
 };
 
 const styles = StyleSheet.create({
+
   container: {
     height: '50%',
   },
+
   playingSpace: {
     backgroundColor: 'white',
     borderColor: 'blue',
     borderWidth: 3,
   },
+
   controlSpace: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     backgroundColor: '#F5F5F5',
   },
+
   buttonView: {
     width: '50%',
     padding: 10,
   },
+
   text: {textAlign: 'center'},
 });
 
 const Square = () => (
   <View
     style={{
-      width: 50,
-      height: 50,
+      width: 100,
+      height: 100,
       backgroundColor: randomHexColor(),
     }}
   />
