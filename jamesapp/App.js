@@ -2,10 +2,11 @@ import { Text, View } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { styles } from "./styles"
 
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "orange"}}>
+    <View style={styles.HomeScreen}>
       <Text>Home!</Text>
     </View>
   );
@@ -13,7 +14,7 @@ function HomeScreen() {
 
 function SettingsScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "blue" }}>
+    <View style={styles.SettingsScreen}>
       <Text>Settings!</Text>
     </View>
   );
