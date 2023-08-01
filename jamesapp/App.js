@@ -7,11 +7,11 @@ import { useState } from 'react';
 
 function HomeScreen() {
   
-  const [message, setMessage] = useState("The sands of Arabia are hot and treacherous");
+  const [message, setMessage] = useState("The sands of Arabia are hot and treacherous.");
 
   return (
     <View style={styles.HomeScreen}>
-      <Text style ={styles.textboxOn} onPress={() => setMessage("But the night brings a chill wind to the desert!")} >{message}</Text>
+      <Text style ={styles.textboxOn} onPress={() => setMessage("But the night brings a chill wind to the desert.")} >{message}</Text>
     </View>
   );
 }
