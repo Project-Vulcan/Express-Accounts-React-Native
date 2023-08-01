@@ -3,11 +3,15 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { styles } from "./styles"
+import { useState } from 'react';
 
 function HomeScreen() {
+  
+  const [message, setMessage] = useState("The sands of Arabia are hot and treacherous!");
+
   return (
     <View style={styles.HomeScreen}>
-      <Text>Home!</Text>
+      <Text style ={styles.textboxOn} onPress={() => setMessage("But the night brings a chill wind to the desert")} >{message}</Text>
     </View>
   );
 }
