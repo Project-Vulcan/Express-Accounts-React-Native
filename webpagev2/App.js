@@ -1,4 +1,5 @@
-import { View, Text } from "react-native";
+import { View, Text, Image } from "react-native"
+import logo from 'caisteclogo.jpg';
 
 export default function App() {
   return (
@@ -10,7 +11,9 @@ export default function App() {
         backgroundColor: "black"
       }}
     >
-      <img src="caisteclego.jpg" alt="The logo of CaisTec: A red mountain"/>
+  
+      <image source="{logo}" alt="The logo of CaisTec which is a red mountain"/>
+     
     </View>
   );
 }
