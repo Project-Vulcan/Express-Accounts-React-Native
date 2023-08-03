@@ -3,13 +3,14 @@ import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { styles } from "./styles"
-
+import { useState } from 'react';
 
 
 function HomeScreen() {
+  const [message, setMessage] = useState("Hello!");
   return (
     <View style={styles.homeSscreen}>
-      <Text>Home!</Text>
+     <Text style={styles.textboxOn} onPress={() => setMessage("Goodbye!")}>{message}</Text>
     </View>
   );
 }
