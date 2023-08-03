@@ -17,5 +17,19 @@ textboxOn: {
     fontSize: 30,
     fontWeight: 'bold',
   },
+  textboxOff: {
+    marginTop: 16,
+    paddingVertical: 8,
+    paddingHorizontal: 5,
+    borderWidth: 2,
+    borderColor: '#000000',
+    borderRadius: 6,
+    backgroundColor: '#ff6347',
+    color: '#C0F20A',
+    textAlign: 'center',
+    fontSize: 30,
+    fontWeight: 'bold',
+  }
+
 
 })

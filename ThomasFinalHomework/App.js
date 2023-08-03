@@ -7,10 +7,15 @@ import { useState } from 'react';
 
 
 function HomeScreen() {
-  const [message, setMessage] = useState("Hello!");
+  const offText = <Text style={styles.textboxOff} onPress={() => setButton(onText)}>Off</Text>
+  const onText = <Text style={styles.textboxOn} onPress={() => setButton(offText)}>On</Text>
+  //const [message, setMessage] = useState("Hello!");
+  const [button, setButton] = useState(offText);
   return (
-    <View style={styles.homeSscreen}>
-     <Text style={styles.textboxOn} onPress={() => setMessage("Goodbye!")}>{message}</Text>
+    
+     <View style={styles.homeSscreen}>
+      {button}
+    
     </View>
   );
 }
