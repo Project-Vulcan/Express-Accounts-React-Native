@@ -1,7 +1,7 @@
 import {StyleSheet} from "react-native"
 
 export const styles = StyleSheet.create({
-homeSscreen : { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "aquamarine" },
+homeSscreen : { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "firebrick" },
 
 SettingsScreen : { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "thistle" }
 
