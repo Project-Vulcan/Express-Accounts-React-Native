@@ -16,14 +16,15 @@ SettingsScreen :
         backgroundColor: "orange" 
     },
 
-    textboxOn: {
+    textboxOff: {
         marginTop: 16,
         paddingVertical: 8,
-        borderWidth: 4,
-        borderColor: '#20232a',
+        paddingHorizontal: 5,
+        borderWidth: 2,
+        borderColor: '#000000',
         borderRadius: 6,
-        backgroundColor: '#00FF00',
-        color: '#20232a',
+        backgroundColor: '#ff6347',
+        color: '#C0F20A',
         textAlign: 'center',
         fontSize: 30,
         fontWeight: 'bold',
